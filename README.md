@@ -20,7 +20,7 @@
 
 ## 🔍 Context
 
-See [notes](https://jac-cs-programming-4-w23.github.io/Notes/#/9-Maps) about Maps!
+See [notes](https://jac-cs-programming-4-w23.github.io/Notes/#/9-Maps/) about Maps!
 
 ## 🚦 Let's Go
 
