@@ -92,8 +92,34 @@ public class WordCounter {
      *
      * @param fileName
      */
-    public void countWordsInFile(String fileName) {
-        // TODO
+    public void countWordsInFile(String fileName)
+    {
+        Scanner scanner = scanFile(fileName);
+        scanner.useDelimiter("[\\p{Punct}\\s]+");
+
+        while (scanner.hasNext())
+        {
+            String word = scanner.next();
+            word = word.toLowerCase();
+
+            if(wordCount.containsKey(word))
+            {
+                wordCount.put(word, wordCount.get(word) + 1);
+            }
+
+            else
+            {
+                wordCount.put(word,1);
+            }
+        }
+
+        stopWords.reset();
+
+        while ((stopWords.hasNext()))
+        {
+            wordCount.remove(stopWords.next());
+        }
+
     }
 
     /**
@@ -101,8 +127,10 @@ public class WordCounter {
      *
      * @param url
      */
-    public void countWordsInUrl(String url) {
-        // TODO
+    public void countWordsInUrl(String url)
+    {
+
+
     }
 
     /**
